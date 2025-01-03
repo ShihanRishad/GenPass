@@ -42,6 +42,7 @@ class _PasswordGeneratorAppState extends State<PasswordGeneratorApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'GenPass',
       themeMode: _themeMode,
       theme: ThemeData(
@@ -126,7 +127,7 @@ class _PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
       SnackBar(
         content: Text('Password copied to clipboard!'),
         behavior: SnackBarBehavior.floating,
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: Colors.white,
       ),
     );
   }
