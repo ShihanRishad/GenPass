@@ -11,6 +11,12 @@ GenPass is a Flutter-based project designed to generate secure passwords effortl
 ## 📱 Screenshot 
 <img alt="screenshot" src="./assets/images/phoneSS.png">
 
+## 🚀 Usage
+- You can try it out one the web: <a href="https://gen-pass-omega.vercel.app/">GenPass (https://gen-pass-omega.vercel.app/)</a>
+- This project is also available as android app as well. You can find the APK on <a href="https://github.com/ShihanRishad/GenPass/releases/">releases</a>
+- Or you can download the apkk directly from <a href="https://github.com/ShihanRishad/GenPass/releases/download/passgen/app-release.apk">This link from release</a>
+- You can also use and build it locally, read the next part:
+
 
 ## 🏠 Get started locally
 You can test this app in your local machine as well! Just follow the steps bellow for that:
@@ -34,7 +40,7 @@ You can test this app in your local machine as well! Just follow the steps bello
    flutter pub get
    ```
 
-### Usage ✅
+### Run the app ✅
 
 1. Run the application:
    ```bash
