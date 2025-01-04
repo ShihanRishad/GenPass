@@ -2,7 +2,7 @@
 <img src="./assets/images/mainpic.svg">
 GenPass is a Flutter-based project designed to generate secure passwords effortlessly.
 
-<h2 > Features</h2> 
+<h2>🔧 Features</h2> 
 
 - Generate random, strong passwords.
 - Customize password length and complexity.
@@ -12,29 +12,29 @@ GenPass is a Flutter-based project designed to generate secure passwords effortl
 <img alt="screenshot" src="./assets/images/phoneSS.png">
 
 
-## Get started locally
+## 🏠 Get started locally
 You can test this app in your local machine as well! Just follow the steps bellow for that:
-### Prerequisites
+### Prerequisites 💻
 
 - Flutter SDK: [Installation Guide](https://flutter.dev/docs/get-started/install)
 - Dart SDK: Included with Flutter
 
-### Installation
+### Installation 📦
 
-1. Clone the repository:
+#### 1. Clone the repository:
    ```bash
    git clone https://github.com/ShihanRishad/genpass.git
    ```
-2. Navigate to the project directory:
+#### 2. Navigate to the project directory:
    ```bash
    cd genpass
    ```
-3. Install dependencies:
+#### 3. Install dependencies:
    ```bash
    flutter pub get
    ```
 
-### Usage
+### Usage ✅
 
 1. Run the application:
    ```bash
@@ -42,7 +42,7 @@ You can test this app in your local machine as well! Just follow the steps bello
    ```
 2. Open the app, and done!
 
-## Contributing
+## ✨ Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request.
 
