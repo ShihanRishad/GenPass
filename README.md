@@ -1,5 +1,5 @@
 <h1 align="center"><img src="assets/icons/fore.png" height="40px" align="left">GenPass<img src="assets/icons/fore.png" height="40px" align="right"></h1> 
-<img src="assets/icons/app_icon.png">
+<img src="./assets/images/mainpic.svg">
 GenPass is a Flutter-based project designed to generate secure passwords effortlessly.
 
 <h2 > Features</h2> 
