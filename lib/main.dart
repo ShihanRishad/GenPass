@@ -127,7 +127,6 @@ class _PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
       SnackBar(
         content: Text('Password copied to clipboard!'),
         behavior: SnackBarBehavior.floating,
-        backgroundColor: Colors.white,
       ),
     );
   }
