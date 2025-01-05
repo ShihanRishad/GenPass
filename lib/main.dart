@@ -171,7 +171,7 @@ class _PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
         color: Theme.of(context).brightness == Brightness.dark
             ? Colors.white.withOpacity(0.1)
             : Colors.grey.shade200,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(100),
         border: Border.all(
           color: Theme.of(context).primaryColor.withOpacity(0.5),
           width: 1.5,

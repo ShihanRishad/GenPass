@@ -45,3 +45,4 @@ app.*.map.json
 .idx
 .idx/
 .vscode
+./test
