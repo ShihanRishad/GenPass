@@ -46,7 +46,7 @@ You can test this app in your local machine as well! Just follow the steps bello
    ```bash
    flutter run
    ```
-2. Open the app, and done!
+2. Now, open the app, and done!
 
 ## ✨ Contributing
 
