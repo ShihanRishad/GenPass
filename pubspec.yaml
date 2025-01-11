@@ -1,6 +1,6 @@
 name: GenPass
 description: A Flutter app for generating secure passwords, made by Shihan.
-version: 1.0.0+1
+version: 0.0.9
 
 environment:
   sdk: ">=2.18.0 <3.0.0"
