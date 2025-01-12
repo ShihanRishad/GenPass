@@ -3,6 +3,7 @@ import 'dart:math';
 // import 'package:shared_preferences/shared_preferences.dart';
 // import './saved_passwords_screen.dart';
 import 'package:flutter/services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class PasswordGeneratorScreen extends StatefulWidget {
   final ThemeMode themeMode;
@@ -27,6 +28,41 @@ class PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
   bool _includeLowercase = true;
   bool _includeNumbers = true;
   bool _includeSpecialCharacters = true;
+
+  // A list to hold saved passwords
+  // List<String> savedPasswords = [];
+
+  @override
+  void initState() {
+    super.initState();
+    _loadSavedPasswords(); // Load saved passwords on app start
+  }
+
+  /// Load saved passwords from shared preferences
+  Future<void> _loadSavedPasswords() async {
+    final prefs = await SharedPreferences.getInstance();
+    final savedList = prefs.getStringList('savedPasswords') ?? [];
+    setState(() {
+      savedPasswords = savedList;
+    });
+  }
+
+  /// Save the `savedPasswords` list to shared preferences
+  Future<void> _savePasswordsToPrefs() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setStringList('savedPasswords', savedPasswords);
+  }
+
+  /// Add a password to the list and save it
+
+  /// Clear all saved passwords (optional utility)
+  Future<void> _clearSavedPasswords() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove('savedPasswords');
+    setState(() {
+      savedPasswords.clear();
+    });
+  }
 
   void _generatePassword() {
     const String uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -218,19 +254,19 @@ class PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
     );
   }
 
-  void _savePassword() {
+  void _savePassword() async {
     if (_passwordController.text.isNotEmpty &&
         _passwordController.text != 'Select at least one option') {
       setState(() {
         savedPasswords.add(_passwordController.text);
-        print(_passwordController.text);
-        print(savedPasswords);
       });
 
-      // Show custom floating notification
+      // Save to shared preferences
+      await _savePasswordsToPrefs();
+
       _showCustomSnackbar(context, 'Password saved!');
     } else {
-      _showCustomSnackbar(context, 'Generate a valid password first!',
+      _showCustomSnackbar(context, 'Please generate a password first',
           isError: true);
     }
   }
@@ -240,8 +276,7 @@ class PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
     final overlay = Overlay.of(context);
     late OverlayEntry overlayEntry;
 
-    final opacityController =
-        ValueNotifier<double>(0.0);
+    final opacityController = ValueNotifier<double>(0.0);
 
     overlayEntry = OverlayEntry(
       builder: (context) => Positioned(
